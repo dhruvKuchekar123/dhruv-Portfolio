@@ -24,10 +24,11 @@ export default function Nav() {
     <>
       <motion.header
         data-testid={NAV.root}
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
+        initial={{ y: -20, opacity: 0, x: "-50%" }}
+        animate={{ y: 0, opacity: 1, x: "-50%" }}
         transition={{ duration: 0.5, ease: [0.175, 0.885, 0.32, 1.075] }}
-        className="fixed top-4 left-1/2 z-50 w-[calc(100%-24px)] max-w-6xl -translate-x-1/2 px-2"
+        style={{ x: "-50%" }}
+        className="fixed top-4 left-1/2 z-50 w-[calc(100%-24px)] max-w-6xl px-2"
       >
         <div
           className={`flex items-center justify-between rounded-full border border-white/10 px-4 py-2.5 backdrop-blur-xl transition-colors duration-300 ${
@@ -93,11 +94,12 @@ export default function Nav() {
           <motion.div
             key="mobile"
             data-testid={NAV.mobileMenu}
-            initial={{ opacity: 0, y: -8 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
+            initial={{ opacity: 0, y: -8, x: "-50%" }}
+            animate={{ opacity: 1, y: 0, x: "-50%" }}
+            exit={{ opacity: 0, y: -8, x: "-50%" }}
             transition={{ duration: 0.25 }}
-            className="fixed left-1/2 top-20 z-50 w-[calc(100%-24px)] max-w-6xl -translate-x-1/2 rounded-2xl border border-white/10 bg-black/85 p-4 backdrop-blur-xl md:hidden"
+            style={{ x: "-50%" }}
+            className="fixed left-1/2 top-20 z-50 w-[calc(100%-24px)] max-w-6xl rounded-2xl border border-white/10 bg-black/85 p-4 backdrop-blur-xl md:hidden"
           >
             <div className="flex flex-col gap-1">
               {NAV_LINKS.map((l) => (

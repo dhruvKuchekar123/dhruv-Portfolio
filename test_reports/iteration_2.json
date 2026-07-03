@@ -1,0 +1,22 @@
+{
+  "summary": "Regression retest of the 2 iteration_1 fixes plus a smoke re-check. Both fixes verified. Backend: 6/6 pytest pass. Frontend on 390px viewport: portfolio-nav rect = {x:12, width:366, right:378} (inside 0..390); computed transform = matrix(1,0,0,1,-183,0) confirming Framer's x:'-50%' now applies; body.scrollWidth == 390 (no horizontal overflow); nav-mobile-toggle at x=317 (fully in-view and clickable); nav-mobile-menu opens at {x:12, width:366} — inside viewport. AI/ML filter: [data-testid='projects-filter-ai-ml'] resolves; clicking it narrows the grid to exactly 2 cards (project-card-syncdub and project-card-recipe-agent). Smoke: hero-section, 10 project cards on default view, experience-section and contact-form all present.",
+  "backend_issues": {"critical": [], "minor": []},
+  "frontend_issues": {"ui_bugs": [], "integration_issues": [], "design_issues": []},
+  "test_report_links": [
+    "/app/backend/tests/backend_test.py",
+    "/app/test_reports/pytest/pytest_results.xml"
+  ],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "Nav.jsx now correctly sets x:'-50%' in both Framer initial/animate AND inline style — good defensive fix. If in future you add whileHover/whileTap animations that write transform, remember to preserve the x offset in those variants too.",
+    "PROJECTS_IDS.filter now slugifies with /[^a-z0-9]+/g and strips leading/trailing '-'. Consistent with SKILLS_IDS.group. Good."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "100% (6/6 pytest)", "frontend": "100% on regression checks"},
+  "test_credentials": "N/A (no auth). Contact form still tested against dhruvkuchekar0@gmail.com (Resend verified inbox).",
+  "seed_data_creation": "backend_test.py inserts transient TEST_ prefixed docs into test_database.contact_messages and status_checks. Harmless.",
+  "retest_needed": false,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "Iteration_1 bugs (mobile nav pill overflow via Framer transform override, AI/ML filter testid not slugified) are FIXED and verified. If further changes are made to Nav.jsx, re-run the 390px viewport check: nav rect inside 0..390 and body.scrollWidth == 390. If new project categories are added, verify each filter testid is slugified (spaces → '-', slashes → '-').",
+  "rca_of_the_issue": "N/A — both previously reported bugs verified fixed."
+}

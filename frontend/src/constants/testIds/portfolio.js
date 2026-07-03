@@ -37,7 +37,8 @@ export const SKILLS_IDS = {
 
 export const PROJECTS_IDS = {
   root: "projects-section",
-  filter: (name) => `projects-filter-${name.toLowerCase()}`,
+  filter: (name) =>
+    `projects-filter-${name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`,
   grid: "projects-grid",
   card: (slug) => `project-card-${slug}`,
   expand: (slug) => `project-expand-${slug}`,

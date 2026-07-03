@@ -132,7 +132,7 @@ export default function Projects() {
     });
 
   return (
-    <section id="projects" data-testid={PROJECTS_IDS.root} className="section relative">
+    <section id="projects" data-testid={PROJECTS_IDS.root} className="section relative overflow-hidden">
       <div
         aria-hidden
         className="pointer-events-none absolute left-1/2 top-24 h-[420px] w-[720px] -translate-x-1/2 rounded-full bg-emerald-500/[0.06] blur-[140px]"

@@ -52,7 +52,7 @@ export default function Contact() {
     "w-full rounded-xl border border-white/10 bg-white/[0.02] px-4 py-3 text-[15px] text-neutral-100 placeholder:text-neutral-600 outline-none transition-all focus:border-emerald-500/50 focus:bg-white/[0.04] focus:ring-2 focus:ring-emerald-500/20";
 
   return (
-    <section id="contact" data-testid={CONTACT_IDS.root} className="section relative">
+    <section id="contact" data-testid={CONTACT_IDS.root} className="section relative overflow-hidden">
       <div
         aria-hidden
         className="pointer-events-none absolute left-1/4 bottom-0 h-[380px] w-[520px] rounded-full bg-emerald-500/[0.08] blur-[130px]"
