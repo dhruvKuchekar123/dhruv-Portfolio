@@ -44,6 +44,9 @@ export const PROJECTS_IDS = {
   expand: (slug) => `project-expand-${slug}`,
   github: (slug) => `project-github-${slug}`,
   live: (slug) => `project-live-${slug}`,
+  video: (slug) => `project-video-${slug}`,
+  shot: (slug, i) => `project-shot-${slug}-${i}`,
+  lightbox: "project-lightbox",
 };
 
 export const EXPERIENCE_IDS = {

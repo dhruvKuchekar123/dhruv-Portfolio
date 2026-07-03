@@ -109,7 +109,35 @@ export const PROJECTS = [
       "Delivered a production-ready two-sided marketplace flow — proof I can ship session-secured, database-backed platforms end to end, not just CRUD demos.",
     year: "2025",
     github: "https://github.com/dhruvKuchekar123",
-    live: null,
+    live: "https://wanderlust-2-49xs.onrender.com",
+    media: {
+      video:
+        "https://customer-assets.emergentagent.com/job_case-study-portfolio-1/artifacts/fj88p3ui_wanderlust%20demo.mp4",
+      poster:
+        "https://customer-assets.emergentagent.com/job_case-study-portfolio-1/artifacts/xle5vizg_Screenshot%202026-06-30%20191336.png",
+      shots: [
+        {
+          url: "https://customer-assets.emergentagent.com/job_case-study-portfolio-1/artifacts/xle5vizg_Screenshot%202026-06-30%20191336.png",
+          caption: "Listing detail — Peaceful Lakefront Escape",
+        },
+        {
+          url: "https://customer-assets.emergentagent.com/job_case-study-portfolio-1/artifacts/w8rdix44_Screenshot%202026-06-30%20192220.png",
+          caption: "Explore — category-filtered listings",
+        },
+        {
+          url: "https://customer-assets.emergentagent.com/job_case-study-portfolio-1/artifacts/ijvzbvq8_Screenshot%202026-06-30%20191440.png",
+          caption: "Reserve flow with live Mapbox location",
+        },
+        {
+          url: "https://customer-assets.emergentagent.com/job_case-study-portfolio-1/artifacts/9asvioxx_Screenshot%202026-06-30%20191405.png",
+          caption: "Host — create a new listing",
+        },
+        {
+          url: "https://customer-assets.emergentagent.com/job_case-study-portfolio-1/artifacts/chbvf4qo_Screenshot%202026-06-30%20191621.png",
+          caption: "Auth — Passport.js signup with Google OAuth",
+        },
+      ],
+    },
   },
   {
     slug: "syncdub",
@@ -142,6 +170,34 @@ export const PROJECTS = [
     year: "2025",
     github: "https://github.com/dhruvKuchekar123",
     live: null,
+    media: {
+      video:
+        "https://customer-assets.emergentagent.com/job_case-study-portfolio-1/artifacts/2iwmkqnw_stocflow_pro_teaser.mp4",
+      poster:
+        "https://customer-assets.emergentagent.com/job_case-study-portfolio-1/artifacts/mnxlaxqe_Screenshot%202026-07-01%20130313.png",
+      shots: [
+        {
+          url: "https://customer-assets.emergentagent.com/job_case-study-portfolio-1/artifacts/mnxlaxqe_Screenshot%202026-07-01%20130313.png",
+          caption: "Landing — real-time terminal preview",
+        },
+        {
+          url: "https://customer-assets.emergentagent.com/job_case-study-portfolio-1/artifacts/0xbf7yk3_Screenshot%202026-07-01%20130343.png",
+          caption: "Dashboard — account overview & live candles",
+        },
+        {
+          url: "https://customer-assets.emergentagent.com/job_case-study-portfolio-1/artifacts/y7g6midu_Screenshot%202026-07-01%20130453.png",
+          caption: "Holdings — portfolio allocation & P&L",
+        },
+        {
+          url: "https://customer-assets.emergentagent.com/job_case-study-portfolio-1/artifacts/649u6e4l_Screenshot%202026-07-01%20130530.png",
+          caption: "Advanced analytics — Sharpe, Beta, exposure",
+        },
+        {
+          url: "https://customer-assets.emergentagent.com/job_case-study-portfolio-1/artifacts/osivwb1d_Screenshot%202026-07-01%20130547.png",
+          caption: "AI Insights — market sentiment & indicators",
+        },
+      ],
+    },
   },
   {
     slug: "recipe-agent",
