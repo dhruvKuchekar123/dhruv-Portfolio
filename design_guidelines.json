@@ -1,0 +1,98 @@
+{
+  "theme": "dark",
+  "archetype": "Archetype 4 (Swiss & High-Contrast) + Accent of 7",
+  "design_philosophy": "A high-end, dark-mode portfolio for an AI-Automation Builder. It blends aggressive technical precision (monospaced metadata, terminal-like grids) with elegant editorial touches (glassmorphic panels, spring-easing micro-interactions, and premium typography). Content is structured using Problem-Solution-Impact narratives to prove value.",
+  "colors": {
+    "background": "#050505",
+    "surface": "#0a0a0a",
+    "surface_glass": "rgba(23, 23, 23, 0.4)",
+    "border": "rgba(255, 255, 255, 0.08)",
+    "border_highlight": "rgba(16, 185, 129, 0.3)",
+    "accent_primary": "#10b981",
+    "accent_glow": "rgba(16, 185, 129, 0.15)",
+    "text_primary": "#fafafa",
+    "text_secondary": "#a3a3a3",
+    "text_muted": "#525252"
+  },
+  "typography": {
+    "fonts": {
+      "heading": "'Cabinet Grotesk', sans-serif",
+      "editorial_highlight": "'Cormorant Garamond', serif",
+      "body": "'Inter', sans-serif",
+      "mono": "'Fira Code', monospace"
+    },
+    "scale": {
+      "h1": "text-5xl sm:text-6xl lg:text-7xl tracking-tighter leading-none font-bold",
+      "h2": "text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-tight font-semibold",
+      "h3": "text-xl sm:text-2xl font-medium",
+      "body": "text-base leading-relaxed",
+      "small_mono": "text-xs font-mono tracking-widest uppercase"
+    }
+  },
+  "spacing_and_layout": {
+    "container": "max-w-7xl mx-auto px-6 md:px-12",
+    "section_gap": "py-24 md:py-32",
+    "grid_bento": "grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8",
+    "card_padding": "p-6 md:p-8"
+  },
+  "components": {
+    "hero": {
+      "structure": "Asymmetric split. Left: Large typography (H1) mixed with italicized editorial serif highlights, role subtitle in mono, 3 CTAs. Right: B&W portrait with subtle emerald glow behind it.",
+      "ctas": "Primary: Solid Emerald background, black text. Secondary/Resume: Glassmorphic with border. Contact: Text link with animated underline."
+    },
+    "projects_card": {
+      "style": "Glassmorphic panel (bg-neutral-900/40 backdrop-blur-xl border border-white/5). Dynamic border lighting on hover (Aceternity style tracing beam or radial gradient mask).",
+      "content": "Problem/Solution/Impact framework. Hidden/collapsed by default, expands in-place using Framer Motion layout animations. Tech stack shown as mono chips."
+    },
+    "experience_timeline": {
+      "style": "Vertical line (border-l border-white/10). Nodes are glowing Emerald dots. Roles and dates in Fira Code."
+    },
+    "navigation": {
+      "style": "Floating pill nav at the top (z-50). backdrop-blur-xl bg-black/50 border border-white/10. Links have spring-easing hover states."
+    },
+    "custom_cursor": {
+      "style": "Framer Motion elastic tracking dot (bg-emerald-500) with a larger trailing hollow circle (border-emerald-500/50). Blends with difference mode on text."
+    }
+  },
+  "motion_and_interactions": {
+    "spring_easing": "transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)",
+    "hover_states": "Cards lift slightly (-translate-y-1) with increased border opacity and emerald glow shadow.",
+    "page_load": "Staggered fade-up for hero elements.",
+    "scroll": "Lenis smooth scrolling is highly recommended for the premium feel."
+  },
+  "visual_enhancers": {
+    "texture": "Global fixed pointer-events-none noise/grain overlay (opacity-20).",
+    "lighting": "Subtle radial gradient blobs (bg-emerald-500/10 blur-3xl) placed behind the hero photo and projects grid to create depth without overwhelming the dark theme."
+  },
+  "media": {
+    "hero_portrait": {
+      "url": "https://customer-assets.emergentagent.com/job_case-study-portfolio-1/artifacts/zthozc5f_WhatsApp%20Image%202026-07-03%20at%202.14.21%20PM.jpeg",
+      "description": "Black and white portrait of Dhruv in a blazer. Use in hero section.",
+      "treatment": "Clip to a rounded rectangle or capsule, add a subtle dark overlay at the bottom if text overlaps."
+    },
+    "abstract_textures": [
+      {
+        "url": "https://images.unsplash.com/photo-1602475063211-3d98d60e3b1f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzh8MHwxfHNlYXJjaHwxfHxkYXJrJTIwYWJzdHJhY3QlMjBncmFpbiUyMHRleHR1cmV8ZW58MHx8fHwxNzgzMDY5NzQxfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Black textile texture. Can be used for deep background noise."
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1762267683517-6e9bc20675e9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzV8MHwxfHNlYXJjaHw0fHxzb2Z0d2FyZSUyMGRldmVsb3BlciUyMHRlY2glMjBhYnN0cmFjdCUyMGRhcmt8ZW58MHx8fHwxNzgzMDY5NzQxfDA&ixlib=rb-4.1.0&q=85",
+        "description": "Abstract light streaks. Can be used as a blurred background element or card overlay."
+      }
+    ]
+  },
+  "accessibility": {
+    "contrast": "Ensure text-muted (#525252) is only used for non-essential decorative text. Use text-secondary (#A3A3A3) for readable body text.",
+    "focus": "focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:ring-offset-2 focus:ring-offset-black",
+    "testing": "All interactive elements must have data-testid attributes."
+  },
+  "instructions_to_main_agent": [
+    "Use framer-motion for all scroll reveals, layout animations (especially the Problem/Solution/Impact card expansions), and the custom elastic cursor.",
+    "Implement lucide-react for standard icons, but utilize @phosphor-icons/react if you need a more distinct/technical weight.",
+    "In Tailwind config, define the custom colors precisely: background '#050505', surface '#0a0a0a', emerald-500 '#10b981'.",
+    "Build the contact form using Shadcn UI form components and prepare the handler for Resend email delivery.",
+    "Do NOT use pure white (#ffffff) for text; stick to neutral-50 (#fafafa) to reduce eye strain on dark backgrounds.",
+    "Include a global CSS class for the noise texture and apply it via a fixed div with pointer-events-none.",
+    "Mix the Cabinet Grotesk font with Cormorant Garamond for specific italicized highlight words in headings to achieve the requested 'Editorial Serif + Tech Forward' fusion."
+  ]
+}
