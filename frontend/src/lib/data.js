@@ -154,6 +154,33 @@ export const PROJECTS = [
     year: "2025",
     github: "https://github.com/dhruvKuchekar123",
     live: null,
+    media: {
+      video: null,
+      poster:
+        "https://customer-assets.emergentagent.com/job_case-study-portfolio-1/artifacts/vpc2rls7_Screenshot%202026-04-20%20180133.png",
+      shots: [
+        {
+          url: "https://customer-assets.emergentagent.com/job_case-study-portfolio-1/artifacts/vpc2rls7_Screenshot%202026-04-20%20180133.png",
+          caption: "Landing — Hindi → Marathi source selector",
+        },
+        {
+          url: "https://customer-assets.emergentagent.com/job_case-study-portfolio-1/artifacts/qu9f46xl_Screenshot%202026-04-20%20180155.png",
+          caption: "Upload — source video ready for processing",
+        },
+        {
+          url: "https://customer-assets.emergentagent.com/job_case-study-portfolio-1/artifacts/7nqomfqw_Screenshot%202026-04-20%20180255.png",
+          caption: "Pipeline — extracting audio & transcribing",
+        },
+        {
+          url: "https://customer-assets.emergentagent.com/job_case-study-portfolio-1/artifacts/btno2rs0_Screenshot%202026-04-23%20131232.png",
+          caption: "Merging — audio + video, 85% complete",
+        },
+        {
+          url: "https://customer-assets.emergentagent.com/job_case-study-portfolio-1/artifacts/vfuduj30_Screenshot%202026-04-20%20182648.png",
+          caption: "Result — dubbed video with download",
+        },
+      ],
+    },
   },
   {
     slug: "stockflow-pro",

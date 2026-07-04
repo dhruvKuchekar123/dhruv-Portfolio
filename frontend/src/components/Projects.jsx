@@ -6,11 +6,11 @@ import {
   ChevronDown,
   Play,
   Maximize2,
-  X,
 } from "lucide-react";
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { PROJECTS, PROJECT_CATEGORIES } from "@/lib/data";
 import { PROJECTS_IDS } from "@/constants/testIds";
+import TechChips from "@/components/TechChips";
 
 const ease = [0.175, 0.885, 0.32, 1.075];
 
@@ -28,7 +28,7 @@ function MediaGallery({ project }) {
         </span>
         <span className="h-px flex-1 bg-white/10" />
         <span className="mono text-[10px] text-neutral-500">
-          {media.shots?.length ?? 0} shots · 1 video
+          {media.shots?.length ?? 0} shots{media.video ? " · 1 video" : ""}
         </span>
       </div>
 
@@ -189,12 +189,8 @@ function ProjectCard({ project, expanded, onToggle }) {
         </div>
       </motion.div>
 
-      <motion.div layout="position" className="mt-5 flex flex-wrap gap-2">
-        {project.stack.map((t) => (
-          <span key={t} className="chip">
-            {t}
-          </span>
-        ))}
+      <motion.div layout="position" className="mt-5">
+        <TechChips items={project.stack} testId={`project-tech-${project.slug}`} />
       </motion.div>
 
       <AnimatePresence initial={false}>
@@ -276,6 +272,14 @@ export default function Projects() {
     return PROJECTS.filter((p) => p.category === filter);
   }, [filter]);
 
+  // Split into two masonry-style columns so an expanding card never inflates
+  // its sibling's height on desktop.
+  const columns = useMemo(() => {
+    const cols = [[], []];
+    filtered.forEach((p, i) => cols[i % 2].push(p));
+    return cols;
+  }, [filtered]);
+
   const toggle = (slug) =>
     setExpanded((prev) => {
       const next = new Set(prev);
@@ -330,16 +334,20 @@ export default function Projects() {
             data-testid={PROJECTS_IDS.grid}
             className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2"
           >
-            <AnimatePresence mode="popLayout">
-              {filtered.map((p) => (
-                <ProjectCard
-                  key={p.slug}
-                  project={p}
-                  expanded={expanded.has(p.slug)}
-                  onToggle={() => toggle(p.slug)}
-                />
-              ))}
-            </AnimatePresence>
+            {columns.map((col, ci) => (
+              <div key={ci} className="flex flex-col gap-5">
+                <AnimatePresence mode="popLayout">
+                  {col.map((p) => (
+                    <ProjectCard
+                      key={p.slug}
+                      project={p}
+                      expanded={expanded.has(p.slug)}
+                      onToggle={() => toggle(p.slug)}
+                    />
+                  ))}
+                </AnimatePresence>
+              </div>
+            ))}
           </motion.div>
         </LayoutGroup>
       </div>
