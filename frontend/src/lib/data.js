@@ -102,11 +102,11 @@ export const PROJECTS = [
     category: "Full-Stack",
     stack: ["Node.js", "Express", "MongoDB Atlas", "Passport.js", "Bootstrap", "Mapbox"],
     problem:
-      "Travelers and hosts lacked a single, trustworthy platform to list, review, and reserve stays with proper role separation and coordinate-accurate maps.",
+      "There was no simple place for travelers and hosts to list, review, and book stays while keeping the experience clear and secure.",
     solution:
-      "Built an MVC-architected MERN booking app with Passport.js session auth, host/guest RBAC middleware, dynamic review moderation, and Mapbox-powered listing coordinates.",
+      "I built a full booking platform with separate host and guest flows, session-based login, role-based access, review handling, and map-based listing placement.",
     impact:
-      "Delivered a production-ready two-sided marketplace flow with secure session auth and role-based access — showing I can build real booking products that feel trustworthy and usable, not just demo-grade CRUD apps.",
+      "The project helped me practice end-to-end product building: auth, database design, role handling, and a user flow that feels complete rather than just functional.",
     year: "2025",
     github: "https://github.com/dhruvKuchekar123",
     live: "https://wanderlust-2-49xs.onrender.com",
@@ -146,11 +146,11 @@ export const PROJECTS = [
     category: "AI / ML",
     stack: ["Python", "PyTorch", "Wav2Lip", "FFmpeg"],
     problem:
-      "Localizing video content usually breaks lip-sync — dubbed speech drifts from mouth movement and the result feels uncanny.",
+      "Video dubbing often looks off because the new voice does not match the speaker's lip movement.",
     solution:
-      "Chained FFmpeg, PyTorch, and the Wav2Lip model into an automated pipeline: demux audio, clone voice, retime translated speech, then re-render lip movement frame by frame.",
+      "I put together an audio-video pipeline using FFmpeg, PyTorch, and Wav2Lip so the dubbed speech could be re-synced to the original video.",
     impact:
-      "Turned a manual, expensive dubbing workflow into a scriptable AI pipeline — showing I can compose multi-model ML systems that move from raw media to usable output with real production value.",
+      "This helped me work with a real media pipeline and understand how AI tools can be combined into something more useful than a single model demo.",
     year: "2025",
     github: "https://github.com/dhruvKuchekar123",
     live: null,
@@ -189,11 +189,11 @@ export const PROJECTS = [
     category: "Full-Stack",
     stack: ["React", "Node.js", "WebSockets", "REST APIs"],
     problem:
-      "New investors need to feel real-market pace without risking money — most simulators feel slow, static, and unlike real trading desks.",
+      "Most beginner trading simulations feel disconnected from real market activity, so they do not help much when someone wants to understand how a live trading screen behaves.",
     solution:
-      "A React dashboard streaming live prices, transactions, and portfolio state through a Node.js WebSocket gateway, with responsive charts and a persistent trade ledger.",
+      "I built a trading dashboard with live price updates, portfolio tracking, and a simple transaction flow using React and a Node-based data layer.",
     impact:
-      "A responsive paper-trading experience that mirrors live-market pacing — evidence I can architect low-latency data flow between market APIs, sockets, and UI with a strong user experience.",
+      "The project let me work with live data handling, real-time UI updates, and a more realistic trading experience than a static mockup.",
     year: "2025",
     github: "https://github.com/dhruvKuchekar123",
     live: null,
@@ -233,11 +233,11 @@ export const PROJECTS = [
     category: "AI / ML",
     stack: ["n8n", "Telegram Bot API", "Google Gemini Vision", "Google Sheets", "APITemplate.io"],
     problem:
-      "Small shopkeepers still write rough handwritten bills on paper, which leads to lost records, manual math errors, and no easy way to track credit or sales history.",
+      "Many small shopkeepers still depend on handwritten bills, which makes recordkeeping slow and prone to mistakes.",
     solution:
-      "Built a Telegram-based AI workflow in n8n that turns a bill photo into structured invoice data using Gemini Vision, verifies totals with deterministic logic, replies in Hinglish, logs everything to Google Sheets, and sends a printable PDF invoice.",
+      "I built a Telegram bot workflow that takes a photo of a bill, extracts the details with Gemini Vision, checks the numbers, and stores the result in Google Sheets with a printable invoice.",
     impact:
-      "Turned a paper-heavy, error-prone process into a near-zero-friction digital workflow — showing how I can combine AI, automation, and real-world business logic into a practical product that helps everyday users.",
+      "The project is a good example of how I approach practical AI tools: take a messy real-world task, build a workflow around it, and keep the process simple enough for everyday use.",
     year: "2025",
     github: "https://github.com/dhruvKuchekar123/-kaccha-bill-bot.git",
     live: null,
@@ -264,11 +264,11 @@ export const PROJECTS = [
     category: "AI / ML",
     stack: ["Python", "LangChain", "OpenAI", "Gradio"],
     problem:
-      "Home cooks stare at half-empty fridges and vague dietary rules with no easy way to turn what's on hand into a real meal.",
+      "People often want a meal suggestion based on what they already have, but the process is usually manual and unclear.",
     solution:
-      "A LangChain agent that ingests inventory + allergen constraints and streams structured JSON recipes through an LLM, served via a Gradio interface.",
+      "I built a small agent that takes a list of ingredients and dietary constraints, then returns a recipe in a structured format through a simple interface.",
     impact:
-      "A working autonomous agent that respects real-world constraints — demonstrating my grasp of prompt orchestration, tool routing, and structured LLM output.",
+      "This was a useful way to practice prompt-based workflows and structured output without overcomplicating the experience.",
     year: "2025",
     github: "https://github.com/dhruvKuchekar123",
     live: null,
@@ -280,11 +280,11 @@ export const PROJECTS = [
     category: "Frontend",
     stack: ["HTML5", "CSS3", "JavaScript", "AOS"],
     problem:
-      "EdTech landing pages often load slowly and fail to communicate value above the fold, hurting sign-up rates.",
+      "A lot of landing pages look fine visually but do not communicate the offer clearly or load efficiently.",
     solution:
-      "A hand-tuned static site with a responsive grid, AOS reveal animations, and premium spacing — optimized for CDN-edge delivery.",
+      "I built a responsive landing page with a simple structure, clear sections, and lightweight animations so the message comes across quickly.",
     impact:
-      "A lightweight, high-Lighthouse landing surface built to convert quickly — proof I ship performance-first marketing pages, not decoration.",
+      "This was a good exercise in making a page feel clean and easy to read while keeping the build simple and lightweight.",
     year: "2024",
     github: "https://github.com/dhruvKuchekar123",
     live: null,
@@ -296,11 +296,11 @@ export const PROJECTS = [
     category: "Full-Stack",
     stack: ["PHP", "MySQL", "Bootstrap"],
     problem:
-      "Small salons manage bookings via WhatsApp and paper — leading to double-bookings and lost customers.",
+      "A salon can lose time and customers when booking is handled through chat and paper notes.",
     solution:
-      "A PHP + MySQL portal with a service catalog and slot-conflict verification so clients can self-book without collisions.",
+      "I built a simple booking portal where clients could view services and book appointments without creating conflicts.",
     impact:
-      "Replaced ad-hoc scheduling with a persistent, queryable appointment system — showing I can ship business-critical CRUD tools even outside my primary stack.",
+      "This project helped me work with a practical scheduling flow and a database-backed system that supports everyday operations.",
     year: "2024",
     github: "https://github.com/dhruvKuchekar123",
     live: null,
@@ -311,11 +311,11 @@ export const PROJECTS = [
     subtitle: "Math Widget",
     category: "Micro-App",
     stack: ["HTML5", "CSS3", "JavaScript"],
-    problem: "Most quick calculators are ugly, laggy, or break on mobile.",
+    problem: "Many simple calculators feel awkward to use on mobile or do not look polished.",
     solution:
-      "A CSS-grid keypad with instant JS evaluation, clean reset states, and hover feedback tuned for touch and desktop.",
+      "I built a calculator with a simple keypad layout and responsive behavior so it works cleanly across screen sizes.",
     impact:
-      "A polished micro-utility that proves attention to symmetry, responsive layout, and zero-latency interactivity.",
+      "This was a small but useful exercise in making a basic utility feel smooth and easy to use.",
     year: "2024",
     github: "https://github.com/dhruvKuchekar123",
     live: null,
@@ -326,11 +326,11 @@ export const PROJECTS = [
     subtitle: "Classic Logic Engine",
     category: "Micro-App",
     stack: ["HTML5", "CSS3", "JavaScript"],
-    problem: "Small games rarely feel satisfying — win detection and reset flow are often buggy.",
+    problem: "Simple games often feel rough because the rules or reset flow are not handled cleanly.",
     solution:
-      "A 3×3 grid backed by declarative win-geometry arrays, animated cell states, and instant reset.",
+      "I built a small tic-tac-toe game with clear win logic and a simple reset flow.",
     impact:
-      "Demonstrates crisp JS game logic and responsive layout craft inside a minimum viable footprint.",
+      "This was a good way to practice game logic and front-end interaction without adding extra complexity.",
     year: "2023",
     github: "https://github.com/dhruvKuchekar123",
     live: null,
@@ -341,11 +341,11 @@ export const PROJECTS = [
     subtitle: "Biographical Semantic Canvas",
     category: "Frontend",
     stack: ["HTML5", "CSS3", "JavaScript"],
-    problem: "Static tribute and biography pages are often visually cluttered and inaccessible.",
+    problem: "Some simple biography pages can feel crowded and hard to read.",
     solution:
-      "Semantic HTML with fluid images, high-contrast typography, and a chronological reading rhythm.",
+      "I built a more structured layout with clear content flow, readable typography, and better spacing.",
     impact:
-      "A readable, accessible long-form layout — proof I care about typography, contrast, and semantics, not only visuals.",
+      "This helped me focus on readability and layout structure early in my front-end work.",
     year: "2023",
     github: "https://github.com/dhruvKuchekar123",
     live: null,
@@ -356,11 +356,11 @@ export const PROJECTS = [
     subtitle: "Legacy Showcase Framework",
     category: "Frontend",
     stack: ["HTML5", "CSS3", "JavaScript"],
-    problem: "My earlier portfolio didn't scale gracefully below tablet breakpoints.",
+    problem: "My earlier portfolio did not adapt well to smaller screens.",
     solution:
-      "Rebuilt with fluid media queries, an animated side-drawer nav, and clean tech cards.",
+      "I rebuilt it using simpler responsive layouts and a cleaner navigation structure.",
     impact:
-      "The predecessor to this redesign — established the responsive baseline that this case-study format now builds on.",
+      "It became the starting point for the more structured portfolio I use today.",
     year: "2023",
     github: "https://github.com/dhruvKuchekar123",
     live: null,
