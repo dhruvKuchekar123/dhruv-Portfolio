@@ -27,11 +27,11 @@ export default function Hero() {
       {/* radial glow */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-40 right-1/4 h-[560px] w-[560px] rounded-full bg-emerald-500/10 blur-[130px]"
+        className="pointer-events-none absolute -top-28 right-[18%] h-[420px] w-[420px] rounded-full bg-emerald-500/10 blur-[100px]"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute -bottom-40 -left-40 h-[500px] w-[500px] rounded-full bg-emerald-500/[0.04] blur-[130px]"
+        className="pointer-events-none absolute -bottom-32 -left-16 h-[360px] w-[360px] rounded-full bg-emerald-500/[0.04] blur-[90px]"
       />
 
       <div className="container-page relative">
@@ -85,12 +85,12 @@ export default function Hero() {
             <motion.p
               variants={rise}
               data-testid={HERO.intro}
-              className="mt-8 max-w-xl text-pretty text-[17px] leading-relaxed text-neutral-300 md:text-lg"
+              className="mt-8 max-w-2xl text-pretty text-[17px] leading-relaxed text-neutral-300 md:text-lg"
             >
-              I build{" "}
-              <span className="text-neutral-50">secure MERN systems</span> and{" "}
-              <span className="h-serif text-emerald-300">AI-driven agents</span> — from
-              role-based marketplaces to lip-sync ML pipelines. Based in {PROFILE.location}.
+              I build <span className="text-neutral-50">secure web apps</span> and{" "}
+              <span className="h-serif text-emerald-300">AI automations</span> that help
+              teams reduce friction, digitize messy workflows, and ship more confidently —
+              from marketplace platforms to real-world agentic tools.
             </motion.p>
 
             <motion.div variants={rise} className="mt-10 flex flex-wrap items-center gap-3">

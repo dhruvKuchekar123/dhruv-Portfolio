@@ -3,6 +3,7 @@ import "@/App.css";
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import Proof from "@/components/Proof";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
@@ -21,6 +22,7 @@ function App() {
       <main>
         <Hero />
         <About />
+        <Proof />
         <Skills />
         <Projects />
         <Experience />

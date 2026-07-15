@@ -98,7 +98,7 @@ export const PROJECTS = [
   {
     slug: "wanderlust",
     name: "Wanderlust",
-    subtitle: "Hospitality Booking Ecosystem",
+    subtitle: "Role-based booking platform for hosts and travelers",
     category: "Full-Stack",
     stack: ["Node.js", "Express", "MongoDB Atlas", "Passport.js", "Bootstrap", "Mapbox"],
     problem:
@@ -106,7 +106,7 @@ export const PROJECTS = [
     solution:
       "Built an MVC-architected MERN booking app with Passport.js session auth, host/guest RBAC middleware, dynamic review moderation, and Mapbox-powered listing coordinates.",
     impact:
-      "Delivered a production-ready two-sided marketplace flow — proof I can ship session-secured, database-backed platforms end to end, not just CRUD demos.",
+      "Delivered a production-ready two-sided marketplace flow with secure session auth and role-based access — showing I can build real booking products that feel trustworthy and usable, not just demo-grade CRUD apps.",
     year: "2025",
     github: "https://github.com/dhruvKuchekar123",
     live: "https://wanderlust-2-49xs.onrender.com",
@@ -142,7 +142,7 @@ export const PROJECTS = [
   {
     slug: "syncdub",
     name: "SyncDub",
-    subtitle: "AI Audio–Video Dubbing & Lip Sync",
+    subtitle: "AI dubbing workflow for lip-sync video localization",
     category: "AI / ML",
     stack: ["Python", "PyTorch", "Wav2Lip", "FFmpeg"],
     problem:
@@ -150,7 +150,7 @@ export const PROJECTS = [
     solution:
       "Chained FFmpeg, PyTorch, and the Wav2Lip model into an automated pipeline: demux audio, clone voice, retime translated speech, then re-render lip movement frame by frame.",
     impact:
-      "Turned a manual, expensive dubbing workflow into a scriptable AI pipeline — showing I can compose multi-model ML systems that operate on raw media, not only text APIs.",
+      "Turned a manual, expensive dubbing workflow into a scriptable AI pipeline — showing I can compose multi-model ML systems that move from raw media to usable output with real production value.",
     year: "2025",
     github: "https://github.com/dhruvKuchekar123",
     live: null,
@@ -185,7 +185,7 @@ export const PROJECTS = [
   {
     slug: "stockflow-pro",
     name: "StockFlow Pro",
-    subtitle: "Real-Time Trading Simulator",
+    subtitle: "Live market simulation with real-time trading feedback",
     category: "Full-Stack",
     stack: ["React", "Node.js", "WebSockets", "REST APIs"],
     problem:
@@ -193,7 +193,7 @@ export const PROJECTS = [
     solution:
       "A React dashboard streaming live prices, transactions, and portfolio state through a Node.js WebSocket gateway, with responsive charts and a persistent trade ledger.",
     impact:
-      "A responsive paper-trading experience that mirrors live-market latency — evidence I can architect low-latency data flow between market APIs, sockets, and UI.",
+      "A responsive paper-trading experience that mirrors live-market pacing — evidence I can architect low-latency data flow between market APIs, sockets, and UI with a strong user experience.",
     year: "2025",
     github: "https://github.com/dhruvKuchekar123",
     live: null,
@@ -229,7 +229,7 @@ export const PROJECTS = [
   {
     slug: "kaccha-bill-bot",
     name: "Kaccha Bill Bot",
-    subtitle: "AI Bill Digitization + Khata Assistant",
+    subtitle: "AI bill digitization + human-verified bookkeeping",
     category: "AI / ML",
     stack: ["n8n", "Telegram Bot API", "Google Gemini Vision", "Google Sheets", "APITemplate.io"],
     problem:
@@ -237,7 +237,7 @@ export const PROJECTS = [
     solution:
       "Built a Telegram-based AI workflow in n8n that turns a bill photo into structured invoice data using Gemini Vision, verifies totals with deterministic logic, replies in Hinglish, logs everything to Google Sheets, and sends a printable PDF invoice.",
     impact:
-      "Turned a paper-heavy, error-prone process into a near-zero-friction digital workflow — showing how I can combine AI, automation, and real-world business logic into a practical agentic product.",
+      "Turned a paper-heavy, error-prone process into a near-zero-friction digital workflow — showing how I can combine AI, automation, and real-world business logic into a practical product that helps everyday users.",
     year: "2025",
     github: "https://github.com/dhruvKuchekar123/-kaccha-bill-bot.git",
     live: null,
@@ -380,6 +380,12 @@ export const EXPERIENCE = [
       "Debugged frontend and backend issues across the lifecycle, improving stability and UX consistency.",
     ],
   },
+];
+
+export const TRUST_POINTS = [
+  { label: "3+", value: "production-style web apps and AI builds shipped or deployed" },
+  { label: "2x", value: "focus on practical automation and workflow improvement" },
+  { label: "1", value: "portfolio centered on secure systems, AI agents, and UI craft" },
 ];
 
 export const CERTIFICATIONS = [
