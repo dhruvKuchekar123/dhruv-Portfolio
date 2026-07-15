@@ -89,6 +89,9 @@ export default function Contact() {
             <p className="mt-6 max-w-md text-neutral-400">
               I&apos;m open to full-stack, AI-automation, and product-focused roles — and to selective freelance work. The fastest way to reach me is through the form, or directly:
             </p>
+            <p className="mt-3 text-sm text-neutral-500">
+              Prefer email? Use the link below.
+            </p>
 
             <div className="mt-8 space-y-3">
               <a
@@ -256,7 +259,7 @@ export default function Contact() {
                     </>
                   ) : (
                     <>
-                      Send message
+                      Start a conversation
                       <Send className="h-4 w-4" strokeWidth={2.5} />
                     </>
                   )}
