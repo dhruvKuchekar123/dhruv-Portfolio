@@ -3,6 +3,44 @@ import { motion } from "framer-motion";
 import { SKILLS } from "@/lib/data";
 import { SKILLS_IDS } from "@/constants/testIds";
 
+const skillIconMap = {
+  "JavaScript (ES6+)": "js",
+  JavaScript: "js",
+  Python: "python",
+  Java: "java",
+  SQL: "mysql",
+  "HTML5": "html",
+  "CSS3": "css",
+  "React.js": "react",
+  "Tailwind CSS": "tailwind",
+  Bootstrap: "bootstrap",
+  "Node.js": "nodejs",
+  "Express.js": "express",
+  "RESTful APIs": "http",
+  MongoDB: "mongodb",
+  "MongoDB Atlas": "mongodb",
+  "MySQL": "mysql",
+  "JWT Auth": "json",
+  Git: "git",
+  GitHub: "github",
+  Render: "render",
+  Cloudinary: "cloudinary",
+  Postman: "postman",
+  "Claude AI": "openai",
+  n8n: "n8n",
+  DSA: "java",
+  OOP: "java",
+  Agile: "github",
+  "System Design": "nodejs",
+  "Prompt Orchestration": "openai",
+};
+
+function getSkillIcon(skill) {
+  const icon = skillIconMap[skill];
+  if (!icon) return null;
+  return `https://skillicons.dev/icons?i=${icon}`;
+}
+
 export default function Skills() {
   return (
     <section id="skills" data-testid={SKILLS_IDS.root} className="section relative">
@@ -45,15 +83,31 @@ export default function Skills() {
                 {group.group}
               </h3>
               <ul className="mt-5 flex flex-wrap gap-2">
-                {group.items.map((it) => (
-                  <li
-                    key={it}
-                    data-testid={SKILLS_IDS.item(it)}
-                    className="chip transition-colors group-hover:border-emerald-500/25"
-                  >
-                    {it}
-                  </li>
-                ))}
+                {group.items.map((it) => {
+                  const iconSrc = getSkillIcon(it);
+                  return (
+                    <li
+                      key={it}
+                      data-testid={SKILLS_IDS.item(it)}
+                      className="chip min-h-9 transition-colors group-hover:border-emerald-500/25"
+                      title={it}
+                    >
+                      {iconSrc ? (
+                        <img
+                          src={iconSrc}
+                          alt={it}
+                          title={it}
+                          className="h-5 w-5"
+                          loading="lazy"
+                        />
+                      ) : (
+                        <span className="text-[11px] uppercase tracking-[0.16em] text-neutral-300">
+                          {it}
+                        </span>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             </motion.div>
           ))}
