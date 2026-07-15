@@ -62,7 +62,7 @@ export default function Contact() {
         message:
           typeof detail === "string"
             ? `${detail}. Your email app opened with your message ready to send.`
-            : "The form hit a snag, so your email app opened with your message ready to send.",
+            : "Your email app opened with your message ready to send. If it didn’t open, you can email me directly at dhruvkuchekar0@gmail.com.",
       });
     }
   };
