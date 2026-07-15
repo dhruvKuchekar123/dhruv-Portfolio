@@ -71,7 +71,6 @@ export const SKILLS = [
     group: "Cloud & Tools",
     items: [
       "Git",
-      "GitHub",
       "Render",
       "MongoDB Atlas",
       "Cloudinary",

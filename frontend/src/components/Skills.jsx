@@ -22,7 +22,6 @@ const skillIconMap = {
   "MySQL": "mysql",
   "JWT Auth": "json",
   Git: "git",
-  GitHub: "github",
   Render: "render",
   Cloudinary: "cloudinary",
   Postman: "postman",
@@ -31,13 +30,29 @@ const skillIconMap = {
   DSA: "java",
   OOP: "java",
   Agile: "github",
-  "System Design": "nodejs",
-  "Prompt Orchestration": "openai",
+  "Responsive Design": "custom-responsive",
+  "CSS Grid / Flexbox": "custom-grid",
+  RBAC: "custom-rbac",
+  "System Design": "custom-system",
+  "Prompt Orchestration": "custom-prompt",
 };
+
+function buildCustomIcon(type) {
+  const svgMap = {
+    "custom-responsive": `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect x="12" y="8" width="40" height="48" rx="8" fill="#111827" stroke="#34d399" stroke-width="2"/><rect x="18" y="14" width="28" height="10" rx="3" fill="#34d399" opacity="0.9"/><rect x="18" y="28" width="28" height="18" rx="3" fill="#1f2937" stroke="#6ee7b7" stroke-width="1.5"/><rect x="24" y="33" width="16" height="2" rx="1" fill="#34d399"/><rect x="24" y="37" width="10" height="2" rx="1" fill="#34d399"/></svg>`,
+    "custom-grid": `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect x="10" y="10" width="44" height="44" rx="8" fill="#111827" stroke="#34d399" stroke-width="2"/><rect x="18" y="18" width="12" height="12" rx="2" fill="#34d399"/><rect x="34" y="18" width="12" height="12" rx="2" fill="#6ee7b7"/><rect x="18" y="34" width="12" height="12" rx="2" fill="#6ee7b7"/><rect x="34" y="34" width="12" height="12" rx="2" fill="#34d399"/></svg>`,
+    "custom-rbac": `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect x="10" y="10" width="44" height="44" rx="10" fill="#111827" stroke="#34d399" stroke-width="2"/><path d="M32 18a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm0 22c-8 0-14 4-14 9v3h28v-3c0-5-6-9-14-9Z" fill="#34d399"/><path d="M24 44h16" stroke="#6ee7b7" stroke-width="2" stroke-linecap="round"/></svg>`,
+    "custom-system": `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect x="10" y="12" width="44" height="40" rx="10" fill="#111827" stroke="#34d399" stroke-width="2"/><rect x="20" y="22" width="12" height="12" rx="3" fill="#34d399"/><rect x="36" y="22" width="8" height="12" rx="3" fill="#6ee7b7"/><rect x="20" y="38" width="24" height="8" rx="3" fill="#34d399" opacity="0.9"/><path d="M32 34v4" stroke="#6ee7b7" stroke-width="2" stroke-linecap="round"/></svg>`,
+    "custom-prompt": `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect x="10" y="12" width="44" height="40" rx="10" fill="#111827" stroke="#34d399" stroke-width="2"/><path d="M22 24h20" stroke="#34d399" stroke-width="3" stroke-linecap="round"/><path d="M22 32h12" stroke="#6ee7b7" stroke-width="3" stroke-linecap="round"/><path d="M22 40h16" stroke="#34d399" stroke-width="3" stroke-linecap="round"/><circle cx="46" cy="40" r="6" fill="#34d399"/></svg>`,
+  };
+
+  return svgMap[type] ? `data:image/svg+xml;utf8,${encodeURIComponent(svgMap[type])}` : null;
+}
 
 function getSkillIcon(skill) {
   const icon = skillIconMap[skill];
   if (!icon) return null;
+  if (icon.startsWith("custom-")) return buildCustomIcon(icon);
   return `https://skillicons.dev/icons?i=${icon}`;
 }
 
