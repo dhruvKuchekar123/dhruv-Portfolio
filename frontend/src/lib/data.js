@@ -227,6 +227,37 @@ export const PROJECTS = [
     },
   },
   {
+    slug: "kaccha-bill-bot",
+    name: "Kaccha Bill Bot",
+    subtitle: "AI Bill Digitization + Khata Assistant",
+    category: "AI / ML",
+    stack: ["n8n", "Telegram Bot API", "Google Gemini Vision", "Google Sheets", "APITemplate.io"],
+    problem:
+      "Small shopkeepers still write rough handwritten bills on paper, which leads to lost records, manual math errors, and no easy way to track credit or sales history.",
+    solution:
+      "Built a Telegram-based AI workflow in n8n that turns a bill photo into structured invoice data using Gemini Vision, verifies totals with deterministic logic, replies in Hinglish, logs everything to Google Sheets, and sends a printable PDF invoice.",
+    impact:
+      "Turned a paper-heavy, error-prone process into a near-zero-friction digital workflow — showing how I can combine AI, automation, and real-world business logic into a practical agentic product.",
+    year: "2025",
+    github: "https://github.com/dhruvKuchekar123/-kaccha-bill-bot.git",
+    live: null,
+    media: {
+      video: null,
+      poster:
+        "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='720' viewBox='0 0 1200 720'><rect width='1200' height='720' fill='%23070707'/><rect x='72' y='72' width='1056' height='576' rx='32' fill='%23111313' stroke='%2310b981' stroke-width='2'/><text x='120' y='270' fill='%23f5f5f5' font-family='Arial, sans-serif' font-size='46' font-weight='700'>Kaccha Bill Bot</text><text x='120' y='330' fill='%2310b981' font-family='Arial, sans-serif' font-size='28'>AI bill digitization + khata automation</text><text x='120' y='430' fill='%23a3a3a3' font-family='Arial, sans-serif' font-size='24'>Telegram • Gemini Vision • Google Sheets</text><circle cx='990' cy='520' r='90' fill='%2310b981' fill-opacity='0.18'/></svg>",
+      shots: [
+        {
+          url: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='720' viewBox='0 0 1200 720'><rect width='1200' height='720' fill='%23070707'/><rect x='80' y='90' width='1040' height='540' rx='28' fill='%23111111' stroke='%2310b981' stroke-width='2'/><text x='120' y='280' fill='%23f5f5f5' font-family='Arial, sans-serif' font-size='42'>Photo → invoice</text><text x='120' y='340' fill='%2310b981' font-family='Arial, sans-serif' font-size='28'>Rough bill to structured JSON</text></svg>",
+          caption: "Telegram photo → structured bill extraction",
+        },
+        {
+          url: "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='720' viewBox='0 0 1200 720'><rect width='1200' height='720' fill='%23070707'/><rect x='80' y='90' width='1040' height='540' rx='28' fill='%23111111' stroke='%2310b981' stroke-width='2'/><text x='120' y='280' fill='%23f5f5f5' font-family='Arial, sans-serif' font-size='42'>Hinglish reply</text><text x='120' y='340' fill='%2310b981' font-family='Arial, sans-serif' font-size='28'>Invoice + confirm buttons</text></svg>",
+          caption: "Hinglish response with confirmation loop",
+        },
+      ],
+    },
+  },
+  {
     slug: "recipe-agent",
     name: "Recipe Generation Agent",
     subtitle: "AI Culinary Assistant",
