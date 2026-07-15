@@ -20,13 +20,13 @@ const skillIconMap = {
   MongoDB: "mongodb",
   "MongoDB Atlas": "mongodb",
   "MySQL": "mysql",
-  "JWT Auth": "json",
+  "JWT Auth": "https://cdn.simpleicons.org/jsonwebtokens",
   Git: "git",
-  Render: "render",
-  Cloudinary: "cloudinary",
+  Render: "https://cdn.simpleicons.org/render",
+  Cloudinary: "https://cdn.simpleicons.org/cloudinary",
   Postman: "postman",
   "Claude AI": "openai",
-  n8n: "n8n",
+  n8n: "https://cdn.simpleicons.org/n8n",
   DSA: "java",
   OOP: "java",
   Agile: "github",
@@ -53,6 +53,7 @@ function getSkillIcon(skill) {
   const icon = skillIconMap[skill];
   if (!icon) return null;
   if (icon.startsWith("custom-")) return buildCustomIcon(icon);
+  if (icon.startsWith("https://")) return icon;
   return `https://skillicons.dev/icons?i=${icon}`;
 }
 
