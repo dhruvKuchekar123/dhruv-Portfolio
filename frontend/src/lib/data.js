@@ -10,7 +10,7 @@ export const PROFILE = {
     "UI / UX Designer",
     "AI-Automation Builder",
   ],
-  location: "Pune, India",
+  location: "Sangameshwar, Ratnagiri, Maharashtra, India",
   origin: "Virar, India",
   tagline:
     "I build secure MERN systems and AI-driven agents — from role-based marketplaces to lip-sync ML pipelines.",
@@ -33,7 +33,7 @@ export const ABOUT = {
     "Recognized nationally with a VNPS '26 win and the IEEE Best Presenter award, I enjoy walking through architecture diagrams as much as writing the code that runs behind them.",
   ],
   facts: [
-    { label: "Based in", value: "Pune, India" },
+    { label: "Based in", value: "Sangameshwar, Ratnagiri, Maharashtra, India" },
     { label: "Stack", value: "MERN + Python / AI" },
     { label: "Focus", value: "Secure APIs · AI agents · UI craft" },
     { label: "Availability", value: "Full-time & freelance" },
