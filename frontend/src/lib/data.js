@@ -258,8 +258,8 @@ export const PROJECTS = [
   },
   {
     slug: "recipe-agent",
-    name: "Recipe Generation Agent",
-    subtitle: "AI Culinary Assistant",
+    name: "Recipe Agent",
+    subtitle: "Ingredient-to-recipe assistant",
     category: "AI / ML",
     stack: ["Python", "LangChain", "OpenAI", "Gradio"],
     problem:
@@ -274,8 +274,8 @@ export const PROJECTS = [
   },
   {
     slug: "lets-code",
-    name: "Let's Code Landing",
-    subtitle: "Educational Interactive UI",
+    name: "Let's Code",
+    subtitle: "Clear landing experience",
     category: "Frontend",
     stack: ["HTML5", "CSS3", "JavaScript", "AOS"],
     problem:
@@ -290,8 +290,8 @@ export const PROJECTS = [
   },
   {
     slug: "aura-salon",
-    name: "Aura Beauty Salon",
-    subtitle: "Client Booking Portal",
+    name: "Aura Salon",
+    subtitle: "Booking portal for salons",
     category: "Full-Stack",
     stack: ["PHP", "MySQL", "Bootstrap"],
     problem:
@@ -306,8 +306,8 @@ export const PROJECTS = [
   },
   {
     slug: "calculator",
-    name: "Sleek Calculator",
-    subtitle: "Math Widget",
+    name: "Calculator UI",
+    subtitle: "Simple math experience",
     category: "Micro-App",
     stack: ["HTML5", "CSS3", "JavaScript"],
     problem: "Many simple calculators feel awkward to use on mobile or do not look polished.",
@@ -321,8 +321,8 @@ export const PROJECTS = [
   },
   {
     slug: "tic-tac-toe",
-    name: "Tic Tac Toe",
-    subtitle: "Classic Logic Engine",
+    name: "Tic-Tac-Toe",
+    subtitle: "Lightweight game logic",
     category: "Micro-App",
     stack: ["HTML5", "CSS3", "JavaScript"],
     problem: "Simple games often feel rough because the rules or reset flow are not handled cleanly.",
@@ -337,7 +337,7 @@ export const PROJECTS = [
   {
     slug: "tribute-page",
     name: "Tribute Page",
-    subtitle: "Biographical Semantic Canvas",
+    subtitle: "Readable biography layout",
     category: "Frontend",
     stack: ["HTML5", "CSS3", "JavaScript"],
     problem: "Some simple biography pages can feel crowded and hard to read.",
@@ -351,8 +351,8 @@ export const PROJECTS = [
   },
   {
     slug: "responsive-portfolio",
-    name: "Responsive Portfolio v1",
-    subtitle: "Legacy Showcase Framework",
+    name: "Responsive Portfolio",
+    subtitle: "Early responsive showcase",
     category: "Frontend",
     stack: ["HTML5", "CSS3", "JavaScript"],
     problem: "My earlier portfolio did not adapt well to smaller screens.",
