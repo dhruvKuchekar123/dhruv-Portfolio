@@ -17,11 +17,11 @@ export default function Proof() {
             <div>
               <p className="eyebrow">02.5 / Proof & recognition</p>
               <h2 className="h-display mt-4 text-balance text-3xl font-semibold text-neutral-50 sm:text-4xl">
-                Built for real outcomes,
-                <span className="ml-2 text-emerald-400">not just demos.</span>
+                Built for real use,
+                <span className="ml-2 text-emerald-400">not just presentation.</span>
               </h2>
               <p className="mt-5 max-w-2xl text-[16px] leading-relaxed text-neutral-300">
-                I focus on systems that are practical, secure, and useful — whether that means shipping a production-style web app, automating a messy workflow, or translating a complex idea into an experience people can trust.
+                I focus on systems that are practical, secure, and dependable — whether that means shipping a web product, streamlining a workflow, or turning a complex idea into something people can trust.
               </p>
 
               <div className="mt-8 grid gap-4 sm:grid-cols-3">

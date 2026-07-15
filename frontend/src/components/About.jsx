@@ -20,11 +20,11 @@ export default function About() {
             >
               Full-stack engineer,
               <br />
-              <span className="h-serif text-emerald-400">ex-designer</span> —
+              <span className="h-serif text-emerald-400">former designer</span> —
               <br />
-              building things
+              building products
               <br />
-              that ship.
+              that hold up.
             </motion.h2>
 
             <dl className="mt-10 grid grid-cols-2 gap-x-4 gap-y-6 border-t border-white/5 pt-8">

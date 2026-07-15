@@ -65,12 +65,10 @@ export default function Contact() {
             <h2 className="h-display mt-3 text-balance text-4xl font-semibold text-neutral-50 sm:text-5xl">
               Let&apos;s build
               <br />
-              <span className="h-serif text-emerald-400">something good</span>.
+              <span className="h-serif text-emerald-400">something useful</span>.
             </h2>
             <p className="mt-6 max-w-md text-neutral-400">
-              I&apos;m open to full-stack, AI-automation, and UI craft roles — and to
-              selective freelance builds. Fastest way to reach me is the form, or
-              directly:
+              I&apos;m open to full-stack, AI-automation, and product-focused roles — and to selective freelance work. The fastest way to reach me is through the form, or directly:
             </p>
 
             <div className="mt-8 space-y-3">

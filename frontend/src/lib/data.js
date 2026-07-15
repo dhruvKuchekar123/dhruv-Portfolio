@@ -5,15 +5,15 @@ export const PROFILE = {
   firstName: "Dhruv",
   lastName: "Kuchekar",
   roles: [
-    "Full-Stack Web Developer",
+    "Full-Stack Developer",
     "Software Engineer",
-    "UI / UX Designer",
-    "AI-Automation Builder",
+    "UI / UX Builder",
+    "AI Automation Engineer",
   ],
   location: "Sangameshwar, Ratnagiri, Maharashtra, India",
   origin: "Virar, India",
   tagline:
-    "I build secure MERN systems and AI-driven agents — from role-based marketplaces to lip-sync ML pipelines.",
+    "I build secure MERN products and practical AI systems — from role-based platforms to workflow automation tools.",
   email: "dhruvkuchekar0@gmail.com",
   github: "https://github.com/dhruvKuchekar123",
   linkedin: "https://www.linkedin.com/in/dhruv-kuchekar-9601501b1/",
@@ -26,16 +26,16 @@ export const PROFILE = {
 
 export const ABOUT = {
   headline:
-    "Full-stack engineer, ex-designer — building systems that ship, not slideware.",
+    "Full-stack engineer and former designer — building products that work, not just look good.",
   paragraphs: [
-    "I started in interface design and moved into full-stack engineering because I wanted to own the whole surface — from Figma frames to Node APIs to the database schema underneath. Today I build MERN applications with strict session security, role-based access control, and clean MVC architecture.",
-    "In parallel, I'm deep into AI systems — LangChain agents, Wav2Lip pipelines, and n8n-style automation flows. I care about the plumbing (RBAC, JWT, RESTful contracts), the polish (typography, spacing, motion), and the outcome (a thing you can actually use).",
-    "Recognized nationally with a VNPS '26 win and the IEEE Best Presenter award, I enjoy walking through architecture diagrams as much as writing the code that runs behind them.",
+    "I started in interface design and moved into full-stack engineering because I wanted to own the complete product experience — from the first screen to the database layer underneath. Today I build MERN applications with secure auth, clear role handling, and practical architecture.",
+    "Alongside that, I work on AI systems and automation flows — from agent-style workflows to media processing pipelines. I care about the details that matter in real use: reliability, structure, and a clean experience for the people using it.",
+    "Recognized nationally with a VNPS '26 win and an IEEE Best Presenter award, I enjoy turning complex ideas into systems that feel calm, considered, and usable.",
   ],
   facts: [
     { label: "Based in", value: "Sangameshwar, Ratnagiri, Maharashtra, India" },
-    { label: "Stack", value: "MERN + Python / AI" },
-    { label: "Focus", value: "Secure APIs · AI agents · UI craft" },
+    { label: "Stack", value: "MERN · Python · AI workflows" },
+    { label: "Focus", value: "Secure systems · practical automation · UI craft" },
     { label: "Availability", value: "Full-time & freelance" },
   ],
 };
@@ -383,8 +383,8 @@ export const EXPERIENCE = [
 
 export const TRUST_POINTS = [
   { label: "3+", value: "production-style web apps and AI builds shipped or deployed" },
-  { label: "2x", value: "focus on practical automation and workflow improvement" },
-  { label: "1", value: "portfolio centered on secure systems, AI agents, and UI craft" },
+  { label: "2x", value: "focus on practical automation and real workflow improvement" },
+  { label: "1", value: "portfolio centered on secure systems, usable AI, and thoughtful UI" },
 ];
 
 export const CERTIFICATIONS = [

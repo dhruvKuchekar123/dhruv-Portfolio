@@ -87,10 +87,10 @@ export default function Hero() {
               data-testid={HERO.intro}
               className="mt-8 max-w-2xl text-pretty text-[17px] leading-relaxed text-neutral-300 md:text-lg"
             >
-              I build <span className="text-neutral-50">secure web apps</span> and{" "}
-              <span className="h-serif text-emerald-300">AI automations</span> that help
-              teams reduce friction, digitize messy workflows, and ship more confidently —
-              from marketplace platforms to real-world agentic tools.
+              I build <span className="text-neutral-50">secure web products</span> and{" "}
+              <span className="h-serif text-emerald-300">practical AI systems</span> that
+              help teams reduce friction, simplify real workflows, and ship with more
+              confidence — from marketplace platforms to automation tools that people can use.
             </motion.p>
 
             <motion.div variants={rise} className="mt-10 flex flex-wrap items-center gap-3">
