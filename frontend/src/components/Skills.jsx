@@ -42,6 +42,12 @@ function getSkillIcon(skill) {
 }
 
 export default function Skills() {
+  const visibleSkills = SKILLS.flatMap((group) =>
+    group.items
+      .map((skill) => ({ skill, iconSrc: getSkillIcon(skill) }))
+      .filter(({ iconSrc }) => iconSrc)
+  );
+
   return (
     <section id="skills" data-testid={SKILLS_IDS.root} className="section relative">
       <div className="container-page">
@@ -54,64 +60,38 @@ export default function Skills() {
             </h2>
           </div>
           <p className="mono max-w-md text-sm text-neutral-400">
-            Grouped by role in a system — not a keyword soup.
+            A single, visual toolkit of the tools I actually use.
           </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {SKILLS.map((group, gi) => (
-            <motion.div
-              key={group.group}
-              data-testid={SKILLS_IDS.group(group.group)}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-40px" }}
-              transition={{ duration: 0.55, delay: gi * 0.06 }}
-              className="glass glass-hover group relative overflow-hidden rounded-2xl p-6"
-            >
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-40px" }}
+          transition={{ duration: 0.55 }}
+          className="glass glass-hover mt-14 overflow-hidden rounded-3xl border border-white/10 p-6 sm:p-8 lg:p-10"
+        >
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+            {visibleSkills.map(({ skill, iconSrc }) => (
               <div
-                aria-hidden
-                className="absolute -right-16 -top-16 h-32 w-32 rounded-full bg-emerald-500/10 blur-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-              />
-              <div className="flex items-center gap-3">
-                <span className="mono text-[10px] font-medium text-neutral-500">
-                  0{gi + 1}
-                </span>
-                <span className="h-px flex-1 bg-white/10" />
+                key={skill}
+                data-testid={SKILLS_IDS.item(skill)}
+                className="flex min-h-[140px] flex-col items-center justify-center rounded-2xl border border-white/10 bg-neutral-950/40 px-3 py-5 text-center transition-transform duration-300 hover:-translate-y-1"
+              >
+                <img
+                  src={iconSrc}
+                  alt={skill}
+                  title={skill}
+                  className="h-10 w-10 sm:h-12 sm:w-12"
+                  loading="lazy"
+                />
+                <p className="mt-3 text-[10px] font-medium uppercase tracking-[0.2em] text-neutral-300 sm:text-[11px]">
+                  {skill}
+                </p>
               </div>
-              <h3 className="mt-4 text-lg font-semibold text-neutral-50">
-                {group.group}
-              </h3>
-              <ul className="mt-5 flex flex-wrap gap-2">
-                {group.items.map((it) => {
-                  const iconSrc = getSkillIcon(it);
-                  return (
-                    <li
-                      key={it}
-                      data-testid={SKILLS_IDS.item(it)}
-                      className="chip min-h-9 transition-colors group-hover:border-emerald-500/25"
-                      title={it}
-                    >
-                      {iconSrc ? (
-                        <img
-                          src={iconSrc}
-                          alt={it}
-                          title={it}
-                          className="h-5 w-5"
-                          loading="lazy"
-                        />
-                      ) : (
-                        <span className="text-[11px] uppercase tracking-[0.16em] text-neutral-300">
-                          {it}
-                        </span>
-                      )}
-                    </li>
-                  );
-                })}
-              </ul>
-            </motion.div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </motion.div>
       </div>
     </section>
   );
