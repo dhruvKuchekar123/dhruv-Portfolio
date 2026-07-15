@@ -5,7 +5,8 @@ import { Github, Linkedin, Mail, Send, ArrowUpRight, Loader2, Check, AlertCircle
 import { PROFILE } from "@/lib/data";
 import { CONTACT_IDS } from "@/constants/testIds";
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const API_BASE = process.env.REACT_APP_BACKEND_URL || (typeof window !== "undefined" ? window.location.origin : "");
+const API = `${API_BASE}/api`;
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "", website: "" });
@@ -13,15 +14,25 @@ export default function Contact() {
 
   const update = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
 
+  const buildMailtoLink = () => {
+    const subject = encodeURIComponent(form.subject || `Portfolio inquiry from ${form.name || "a visitor"}`);
+    const body = encodeURIComponent(
+      `Name: ${form.name || ""}\nEmail: ${form.email || ""}\n\n${form.message || ""}`
+    );
+    return `mailto:${PROFILE.email}?subject=${subject}&body=${body}`;
+  };
+
   const onSubmit = async (e) => {
     e.preventDefault();
     if (status.state === "loading") return;
     setStatus({ state: "loading", message: "" });
+
     try {
       const { data } = await axios.post(`${API}/contact`, form, {
         headers: { "Content-Type": "application/json" },
         timeout: 20000,
       });
+
       if (data?.email_sent) {
         setStatus({
           state: "success",
@@ -38,12 +49,20 @@ export default function Contact() {
       setForm({ name: "", email: "", subject: "", message: "", website: "" });
     } catch (err) {
       const detail = err?.response?.data?.detail;
+      try {
+        if (typeof window !== "undefined") {
+          window.location.href = buildMailtoLink();
+        }
+      } catch {
+        // ignore
+      }
+
       setStatus({
-        state: "error",
+        state: "success",
         message:
           typeof detail === "string"
-            ? detail
-            : "Something went wrong. Please try again or email me directly.",
+            ? `${detail}. Your email app opened with your message ready to send.`
+            : "The form hit a snag, so your email app opened with your message ready to send.",
       });
     }
   };
